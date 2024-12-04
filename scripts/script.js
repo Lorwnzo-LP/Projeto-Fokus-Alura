@@ -23,7 +23,7 @@ const beepSom = new Audio('/sons/beep.mp3');
 
 // temporizador
 const tempoNaTela = document.getElementById('timer');
-let tempoDecorridoEmSegundos = 1;
+let tempoDecorridoEmSegundos = 1500;
 let intervaloId = null;
 const focoTempo = 1500;
 const curtoTempo = 300;
