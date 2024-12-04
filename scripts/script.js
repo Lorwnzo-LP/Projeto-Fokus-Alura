@@ -23,7 +23,7 @@ const beepSom = new Audio('/sons/beep.mp3');
 
 // temporizador
 const tempoNaTela = document.getElementById('timer');
-let tempoDecorridoEmSegundos = 1500;
+let tempoDecorridoEmSegundos = 1;
 let intervaloId = null;
 const focoTempo = 1500;
 const curtoTempo = 300;
@@ -89,6 +89,11 @@ const contagemRegressiva = () => {
     if (tempoDecorridoEmSegundos <= 0){
         beepSom.play();
         alert('tempo finalizado');
+        const focoAtivado = html.getAttribute('data-contexto') == 'foco';
+        if (focoAtivado) {
+            const evento = new CustomEvent('FocoFinalizado');
+            document.dispatchEvent(evento);
+        }
         zerar();
         return
     }
