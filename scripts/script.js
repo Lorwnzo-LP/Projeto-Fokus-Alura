@@ -62,7 +62,7 @@ function alternarContexto(contexto){
     })
 
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `/imagens/${contexto}.png`);
+    banner.setAttribute('src', `imagens/${contexto}.png`);
     switch(contexto) {
         case "foco":
             appTitle.innerHTML = `Otimize sua produtividade,<br>
@@ -112,14 +112,14 @@ function iniciarOuPausar(){
     intervaloId = setInterval(contagemRegressiva, 1000);
     playSom.play();
     iniciarOuPausarBt.textContent = 'Pausar';
-    iniciarOuPausarImage.setAttribute('src','/imagens/pause.png');
+    iniciarOuPausarImage.setAttribute('src','imagens/pause.png');
 }
 
 function zerar(){
     clearInterval(intervaloId);
     intervaloId = null;
     iniciarOuPausarBt.textContent = 'Começar';
-    iniciarOuPausarImage.setAttribute('src','/imagens/play_arrow.png');
+    iniciarOuPausarImage.setAttribute('src','imagens/play_arrow.png');
 }
 
 function mostrarTempo() {
